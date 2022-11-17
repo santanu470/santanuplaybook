@@ -12,5 +12,5 @@
       - receptor
      register: All_service_status
      name: showing reports
-     debug: 
-     var: All_service_status
+      debug: 
+       var: All_service_status
