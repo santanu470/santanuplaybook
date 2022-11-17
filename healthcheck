@@ -1,0 +1,16 @@
+---
+- name: checking the status
+  tasks: 
+   - name: checcking the status
+     command: systemctl status "{{iteam}}"
+     loop:
+      - automation-controller
+      - nginx
+      - redis
+      - postgresql
+      - supervisord
+      - receptor
+     register: All_service_status
+     name: showing reports
+     debug: 
+     var: All_service_status
