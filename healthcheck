@@ -1,6 +1,7 @@
 ---
 - name: checking the status
   hosts: localhost
+  remote_user: root
   tasks: 
    - name: checcking the status
      command: systemctl status "{{iteam}}"
