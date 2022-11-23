@@ -3,7 +3,7 @@
   hosts: 192.168.0.109
   tasks: 
    - name: checcking the status
-     command: systemctl status "{{iteam}}"
+     command: systemctl status "{{ iteam }}"
      loop:
       - automation-controller
       - nginx
@@ -12,6 +12,6 @@
       - supervisord
       - receptor
      register: All_service_status
-     name: showing reports
+   - name: showing reports
       debug: 
        var: All_service_status
