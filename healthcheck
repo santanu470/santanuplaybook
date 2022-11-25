@@ -1,6 +1,6 @@
 ---
 - name: checking the status
-  hosts: localhosts
+  hosts: 192.168.0.109
   tasks: 
    - name: checcking the status
      command: systemctl status "{{ iteam }}"
